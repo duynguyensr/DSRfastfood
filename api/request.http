@@ -1,0 +1,39 @@
+###
+POST http://localhost:5000/api/auth/login 
+Content-Type: application/json
+
+{
+    "username": "Nguyễn Duy Quang",
+    "password": "12345"
+}
+
+###
+POST http://localhost:5000/api/auth/login 
+Content-Type: application/json
+
+{
+    "username": "12345",
+    "password": "1234"
+}
+
+###
+POST http://localhost:5000/api/product/comment
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTllNWIwNTMwNjkzMjMwMDM2ZDRkNzMiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjQ0MzM4OTQzLCJleHAiOjE2NDQ1OTgxNDN9.oy_FD5HrbCYvpayTDdi4AmGJu0io8Jpefjd_BUByKkU
+Content-Type: application/json
+
+{
+    "productId": "6198c398522222aa6483be25",
+    "userId": "619e5b0530693230036d4d7",
+    "desc": "should have one"
+}
+
+###
+PUT http://localhost:5000/api/product/comment/619e5b0530693230036d4d73/6202a244e27464ac60c91927
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTllNWIwNTMwNjkzMjMwMDM2ZDRkNzMiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjQ0MzM4OTQzLCJleHAiOjE2NDQ1OTgxNDN9.oy_FD5HrbCYvpayTDdi4AmGJu0io8Jpefjd_BUByKkU
+Content-Type: application/json
+
+{
+    "productId": "6198c398522222aa6483be25",
+    "userId": "619e5b0530693230036d4d73",
+    "desc": "should have one before died"
+}
